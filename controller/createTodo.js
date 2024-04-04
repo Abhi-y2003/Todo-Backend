@@ -7,13 +7,13 @@ const Todo = require("../models/todo");
 
 //async function because main thread block nhi hona chahiye data add jo bhe hoga database me sab delay ho jayega or main thread chalta rahega
 
-exports.createTodo = async(req,res)=>{
+exports.createTodo = async(req, res)=>{
     try{
         //extracting title and descrption from request ke body
-        const{title, descrption} = req.body;
+        const {title,description} =req.body;
 
         //create a new todo object and insert in the db
-        const res = await Todo.create({title,descrption});
+        const response = await Todo.create({title,description});
 
         //send a json response with a success flag
         res.status(200).json(
