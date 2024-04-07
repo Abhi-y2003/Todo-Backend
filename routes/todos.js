@@ -13,7 +13,7 @@ const {updateTodo} = require("../controller/updateTodo");
 router.post("/createTodo", createTodo);
 router.get("/getTodo", getTodo);
 router.get("/getTodo/:id", getTodoById);
-router.get("/updateTodo/:id", updateTodo);
+router.put("/updateTodo/:id", updateTodo);
 
 
 module.exports = router;
